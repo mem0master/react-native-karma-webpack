@@ -1,6 +1,6 @@
 # README #
 
-W.I.P, not production ready : 
+W.I.P, not production ready :
 
 git clone git@bitbucket.org:osedea/es2015-karma-mocha-chai-phantomjs-react-native-redux-skeleton.git appFolder
 
@@ -13,3 +13,5 @@ npm test
 Dev in BDD style
 
 examples coming soon, check app/modules/test
+
+for a new project, you can remove everything inside app 
