@@ -44,6 +44,9 @@ module.exports = {
   },
   resolve: {
     extensions: [ '', '.js', '.jsx' ],
+    root: [
+        path.resolve('app/')
+    ],
     alias: {
     //   actions: srcPath + 'actions/',
       helpers: path.join(__dirname, '/../test/helpers'),

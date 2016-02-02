@@ -1,9 +1,23 @@
 "use strict";
 
-const Reducer = (state = {}, action) => {
-    switch(action.type){
-        default:
-            return state;
+const Reducer = (state = [], action) => {
+
+    if(action){
+        switch(action.type){
+            case 'ADD_ITEM':
+                return [
+                    ...state,
+                    {
+                        id : action.id,
+                        text  : action.text,
+                        isProccessed : false
+                    }
+                ];
+            default:
+                return state;
+        }
+    }else{
+        return state;
     }
 }
 
