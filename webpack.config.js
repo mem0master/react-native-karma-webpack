@@ -11,5 +11,4 @@ var env;
 
 process.env.REACT_WEBPACK_ENV = 'test';
 
-
 module.exports = require(path.join(__dirname, 'cfg/test'));

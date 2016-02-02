@@ -32,6 +32,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
+        exclude: /node_modules/,
         include: [].concat(
           baseConfig.additionalPaths,
           [
