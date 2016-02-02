@@ -1,6 +1,7 @@
 # OSX
 #
 .DS_Store
+./**/*/.DS_Store
 
 # Xcode
 #
@@ -32,3 +33,7 @@ local.properties
 #
 node_modules/
 npm-debug.log
+
+# Tests
+#
+coverage/
