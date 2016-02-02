@@ -1,7 +1,7 @@
 'use strict';
 
 let path = require('path');
-let srcPath = path.join(__dirname, '/../src/');
+let srcPath = path.join(__dirname, '/../app/');
 
 let baseConfig = require('./base');
 
@@ -15,8 +15,12 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         loader: 'isparta-instrumenter-loader',
+        exclude: /node_modules/,
+        query: {
+            presets: ['es2015']
+        },
         include: [
-          path.join(__dirname, '/../src')
+          path.join(__dirname, '/../app')
         ]
       }
     ],
@@ -31,7 +35,7 @@ module.exports = {
         include: [].concat(
           baseConfig.additionalPaths,
           [
-            path.join(__dirname, '/../src'),
+            path.join(__dirname, '/../app'),
             path.join(__dirname, '/../test')
           ]
         )
@@ -41,13 +45,13 @@ module.exports = {
   resolve: {
     extensions: [ '', '.js', '.jsx' ],
     alias: {
-      actions: srcPath + 'actions/',
+    //   actions: srcPath + 'actions/',
       helpers: path.join(__dirname, '/../test/helpers'),
-      components: srcPath + 'components/',
-      sources: srcPath + 'sources/',
-      stores: srcPath + 'stores/',
-      styles: srcPath + 'styles/',
-      config: srcPath + 'config/' + process.env.REACT_WEBPACK_ENV
+    //   components: srcPath + 'components/',
+    //   sources: srcPath + 'sources/',
+    //   stores: srcPath + 'stores/',
+    //   styles: srcPath + 'styles/',
+    //   config: srcPath + 'config/' + process.env.REACT_WEBPACK_ENV
     }
   },
   plugins: [

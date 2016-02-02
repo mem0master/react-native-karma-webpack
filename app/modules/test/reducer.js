@@ -2,7 +2,7 @@
 
 const Reducer = (state = {}, action) => {
     switch(action.type){
-        defautl:
+        default:
             return state;
     }
 }

@@ -3,4 +3,4 @@
 /*eslint no-console: 0*/
 'use strict';
 
-import Reducer from 'reducer'
+import Reducer from './reducer';
