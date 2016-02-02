@@ -1,9 +1,6 @@
-/*eslint-env node, mocha */
-/*global expect */
-/*eslint no-console: 0*/
-'use strict';
+// for more details, checkout : http://rackt.org/redux/docs/recipes/WritingTests.html
 
-import Reducer from './reducer';
+import ItemsReducer from './itemsreducer';
 import Uuid from 'utils/uuid';
 
 
@@ -13,7 +10,7 @@ describe('Item reducer', () =>{
 
         it('should return an empty state object in case no action has been provided', () => {
 
-            expect(Reducer(),{type:"NOTHING"}).to.be.an('array');
+            expect(ItemsReducer(),{type:"NOTHING"}).to.be.an('array');
 
         });
     });
@@ -40,7 +37,7 @@ describe('Item reducer', () =>{
             Object.freeze(action);
             Object.freeze(newState);
 
-            expect(Reducer(initialState,action)).to.deep.equal(newState);
+            expect(ItemsReducer(initialState,action)).to.deep.equal(newState);
 
         })
 

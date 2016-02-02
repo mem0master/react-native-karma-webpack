@@ -1,6 +1,6 @@
 "use strict";
 
-const Reducer = (state = [], action) => {
+const itemsReducer = (state = [], action) => {
 
     if(action){
         switch(action.type){
@@ -21,4 +21,4 @@ const Reducer = (state = [], action) => {
     }
 }
 
-module.exports = Reducer;
+module.exports = itemsReducer;
